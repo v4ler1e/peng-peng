@@ -1,0 +1,95 @@
+canvas {
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #444;
+    box-shadow: 0 0 15px #161514;
+}
+
+.score {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #444;
+    border: 20px solid #DF2935;
+    box-shadow: 0 0 50px #DF2935;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #020402;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #444;
+    color: white;
+    border: 2px solid rgb(255, 3, 3);
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgb(134, 0, 0);
+}
+
+.leaderboard {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid #DF2935;
+    box-shadow: 0 0 20px #DF2935;
+    padding: 10px;
+    width: 300px;
+    background-color: #333;
+}
+
+.leaderboard h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 10px;
+    border: 1px solid #cf1622;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.leaderboard th {
+    background-color: #c91e2a;
+}

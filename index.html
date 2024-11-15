@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score">Player 1 : <span id="score1">0</span>  |  Player 2 : <span id="score2">0</span></div>
+        <canvas id="pong" width="800" height="600"></canvas>
+        
+        <div class="buttons-container">
+            <div id="easy" class="button">Easy</div>
+            <div id="normal" class="button">Normal</div>
+            <div id="hard" class="button">Hard</div>
+            <div id="insane" class="button">Insane</div>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>Players</th>
+                        <th>Current score</th>
+                        <th>Best score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player 1</td>
+                        <td id="currentScore1">0</td>
+                        <td id="highScore1">0</td>
+                    </tr>
+                    <tr>
+                        <td>Player 2</td>
+                        <td id="currentScore2">0</td>
+                        <td id="highScore2">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

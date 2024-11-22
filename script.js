@@ -181,5 +181,26 @@ function gameLoop() {
     draw();
     requestAnimationFrame(gameLoop);
 }
+async function saveHighScore(score, player) {
+    const data = {score: score, player: player}
+
+    const result = await fetch('https://kool.krister.ee/chat/peng-peng', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    });
+}
+async function fetchHighScores() {
+    const response = await fetch('https://kool.krister.ee/chat/peng-peng');
+    const data = await response.json();
+}
+
+//  сделать так, чтобы score и player сохранялся в датабазу, а именно, нужно натсроить сохранение результата до нажатия кнопки R
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchHighScores();
+});
 
 gameLoop();

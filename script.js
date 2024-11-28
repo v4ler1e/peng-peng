@@ -68,6 +68,8 @@ document.addEventListener('keydown', (event) => {
         paused = false;
     }
     if (event.key.toLowerCase() === 'r') {
+        saveHighScore(highScore1, "player1")
+        saveHighScore(highScore2, "player2")
         resetGame();
     }
 });
@@ -195,12 +197,17 @@ async function saveHighScore(score, player) {
 async function fetchHighScores() {
     const response = await fetch('https://kool.krister.ee/chat/peng-peng');
     const data = await response.json();
+    for(const item of data){
+        if (item.player === "player1"){
+            highScore1 = item.score;
+        }
+        else {
+            highScore2 = item.score;
+        }
+    }
+    updateLeaderboard()
 }
 
-//  сделать так, чтобы score и player сохранялся в датабазу, а именно, нужно натсроить сохранение результата до нажатия кнопки R
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetchHighScores();
-});
+//  сделать так, чтобы score и player сохранялся в датабазу, а именно, нужно насроить сохранение результата при нажатия кнопки R
 
 gameLoop();

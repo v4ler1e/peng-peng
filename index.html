@@ -4,7 +4,7 @@
     <title>PONG</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="fetchHighScores()">
     <div class="game-container">
         <div class="score">Player 1 : <span id="score1">0</span>  |  Player 2 : <span id="score2">0</span></div>
         <canvas id="pong" width="800" height="600"></canvas>
@@ -41,12 +41,10 @@
             </table>
         </div>
     </div>
-
-    <iframe width="0" height="0" 
-    src="https://www.youtube.com/watch?v=vyA1z2A-lhU" 
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-    </iframe>
     
+    <audio controls loop autoplay>
+        <source src ="music.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="script.js"></script>
 </body>
